@@ -1,7 +1,10 @@
 package app
 
-class Cliente {
+class Cliente extends Pessoa{
+
+    String tipo
 
     static constraints = {
+        
     }
 }
