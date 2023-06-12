@@ -31,21 +31,7 @@
 </content>
 
 <div id="content" role="main">
-<g:render template="/layouts/navbar" />
-<g:render template="/layouts/navbar" />
-<g:render template="/layouts/navbar" />
-    <section class="row colset-2-its">
-        <div id="cadastros" role="navigation">
-            <h2>Cadastros:</h2>
-            <ul>
-                <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.name } }">
-                    <li class="controller">
-                        <g:link controller="${c.logicalPropertyName}">${c.name}</g:link>
-                    </li>
-                </g:each>
-            </ul>
-        </div>
-    </section>
+
 </div>
 
 </body>

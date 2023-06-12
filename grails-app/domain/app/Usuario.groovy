@@ -9,7 +9,7 @@ class Usuario {
     static constraints = {
         nome(nullable: false)
         email(nullable: false, email: true, unique: true)
-        senha(nullable: false, maxSize: 100)
+        senha(password: true, nullable: false, maxSize: 100)
         dataCadastro(nullable: false)
     }
 }
