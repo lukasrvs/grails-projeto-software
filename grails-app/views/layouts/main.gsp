@@ -11,6 +11,15 @@
 
     <asset:stylesheet src="application.css"/>
 
+      <!-- Custom fonts for this template-->
+    <link href="${resource(dir: 'js', file: 'vendor/fontawesome-free/css/all.min.css')}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="${resource(dir: 'stylesheet', file: 'sb-admin-2.min.css')}" rel="stylesheet">
+
     <g:layoutHead/>
 </head>
 
@@ -23,8 +32,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <img id="logo-img" src="img/logo-img.png" />
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+        <img id="logo-img" src="${resource(dir: 'images', file: 'logo-img.png' )}" />
         <style>
           img {
             width: 30%;
@@ -38,7 +47,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Página Inicial</span></a>
       </li>
@@ -52,12 +61,12 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="cliente-list.html">Clientes</a>
-            <a class="collapse-item" href="empresa-list.html">Empresa</a>
-            <a class="collapse-item" href="mercadoria-list.html">Mercadorias</a>
-            <a class="collapse-item" href="motorista-list.html">Motoristas</a>
-            <a class="collapse-item" href="veiculo-list.html">Veículos</a>
-            <a class="collapse-item" href="usuario-list.html">Usuarios</a>
+          <g:link class="collapse-item" controller="cliente">Clientes</g:link>
+          <g:link class="collapse-item" controller="empresa">Empresa</g:link>
+          <g:link class="collapse-item" controller="mercadoria">Mercadorias</g:link>
+          <g:link class="collapse-item" controller="motorista">Motoristas</g:link>
+          <g:link class="collapse-item" controller="veiculo">Veículos</g:link>
+          <g:link class="collapse-item" controller="usuario">Usuarios</g:link>
           </div>
         </div>
       </li>
@@ -71,9 +80,9 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="ordem-list.html">Ordem de Carregamento</a>
-            <a class="collapse-item" href="pedido-list.html">Pedido</a>
-            <a class="collapse-item" href="rotas-list.html">Rotas</a>
+            <a class="collapse-item" href="ordem">Ordem de Carregamento</a>
+            <a class="collapse-item" href="pedido">Pedido</a>
+            <a class="collapse-item" href="rotas">Rotas</a>
           </div>
         </div>
       </li>
@@ -87,9 +96,9 @@
         </a>
         <div id="relatorios" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="carregamento-relatorio-list.html">Carregamento</a>
-            <a class="collapse-item" href="desempenho-relatorio-list.html">Desempenho</a>
-            <a class="collapse-item" href="financeiro-relatorio-list.html">Financeiro</a>
+            <a class="collapse-item" href="carregamento-relatorio">Carregamento</a>
+            <a class="collapse-item" href="desempenho-relatorio">Desempenho</a>
+            <a class="collapse-item" href="financeiro-relatorio">Financeiro</a>
           </div>
         </div>
       </li>
@@ -155,7 +164,7 @@
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">3+</span>
+                <%-- <span class="badge badge-danger badge-counter">3+</span> --%>
               </a>
               <!-- Dropdown - Alerts -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -300,25 +309,36 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
+        
+        <g:if test="${controllerName == null}">
           <!-- Page Heading -->
-          <div class="p-3 bg-gray-200">
-            <div class="card-body">
-                <h6 class="m-0 font-weight-bold text-primary">
-                  Seja bem vindo ao SGT
-                </h6>
-              </div>
-          </div>
-          <p class="mb-4"></p>
-
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-          </div>
-
+            <div class="row">
+                <div class="col-12 col-lg-12 content">
+                    <div class="p-3 bg-gray-200">
+                        <div class="card-body">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                            Seja bem vindo ao SGT
+                            </h6>
+                        </div>
+                    </div>
+                    <p class="mb-4"></p>
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+                </div>
+            </div>
+        </g:if>
+        <g:else>
           <!-- Content Row -->
           <div class="row">
+            <div class="col-12 col-lg-12 content">
+                <!-- Conteúdo da página -->
+                <g:layoutBody/>
+            </div>
           </div>
+        </g:else>
 
         </div>
         <!-- /.container-fluid -->
@@ -368,21 +388,21 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="${resource(dir: 'js', file: 'vendor/jquery/jquery.min.js' )}"></script>
+  <script src="${resource(dir: 'js', file: 'vendor/bootstrap/js/bootstrap.bundle.min.js' )}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="${resource(dir: 'js', file: 'vendor/jquery-easing/jquery.easing.min.js' )}"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="${resource(dir: 'js', file: 'sb-admin-2.min.js' )}"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="${resource(dir: 'js', file: 'vendor/chart.js/Chart.min.js' )}"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="${resource(dir: 'js', file: 'demo/chart-area-demo.js' )}"></script>
+  <script src="${resource(dir: 'js', file: 'demo/chart-pie-demo.js' )}"></script>
 
     <asset:javascript src="application.js"/>
 </body>
