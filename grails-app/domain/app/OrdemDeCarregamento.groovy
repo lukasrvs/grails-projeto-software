@@ -1,7 +1,7 @@
 package app
 
 class OrdemDeCarregamento {
-    String motorista
+    Motorista motorista
     Pedido pedido
     BigDecimal valorCarga
     BigDecimal impostos
