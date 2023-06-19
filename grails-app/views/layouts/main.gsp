@@ -96,9 +96,9 @@
         </a>
         <div id="relatorios" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="carregamento-relatorio">Carregamento</a>
-            <a class="collapse-item" href="desempenho-relatorio">Desempenho</a>
-            <a class="collapse-item" href="financeiro-relatorio">Financeiro</a>
+            <a class="collapse-item" href="relatorioCarregamento">Carregamento</a>
+            <a class="collapse-item" href="relatorioDesempenho">Desempenho</a>
+            <a class="collapse-item" href="relatorioFinanceiro">Financeiro</a>
           </div>
         </div>
       </li>
