@@ -16,6 +16,6 @@ class Empresa {
         telefone(nullable: false)
         email(nullable: false, email: true)
         responsavel(nullable: false)
-        tipo(nullable: false, inList: ["filial", "matriz"])
+        tipoTransportadora(nullable: false, inList: ["filial", "matriz"])
     }
 }
