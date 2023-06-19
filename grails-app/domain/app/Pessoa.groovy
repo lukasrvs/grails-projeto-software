@@ -10,6 +10,7 @@ class Pessoa {
 
     String pais
     String estado
+    String cidade
     String cep
     String logradouro
     Integer numero
@@ -23,5 +24,6 @@ class Pessoa {
         estado(nullable:false, maxSize:255)
         logradouro(nullable:false, maxSize:255)
         numero(nullable:false, maxSize:255)
+        cidade(nullable:false, maxSize:255)
     }
 }
