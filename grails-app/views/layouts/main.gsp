@@ -61,12 +61,12 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-          <g:link class="collapse-item" controller="cliente">Clientes</g:link>
-          <g:link class="collapse-item" controller="empresa">Empresa</g:link>
-          <g:link class="collapse-item" controller="mercadoria">Mercadorias</g:link>
-          <g:link class="collapse-item" controller="motorista">Motoristas</g:link>
-          <g:link class="collapse-item" controller="veiculo">Veículos</g:link>
-          <g:link class="collapse-item" controller="usuario">Usuarios</g:link>
+          <g:link class="collapse-item" controller="${createLink(controller:'cliente', action: 'index')}">Clientes</g:link>
+          <g:link class="collapse-item" controller="${createLink(controller:'empresa', action: 'index')}">Empresa</g:link>
+          <g:link class="collapse-item" controller="${createLink(controller:'mercadoria', action: 'index')}">Mercadorias</g:link>
+          <g:link class="collapse-item" controller="${createLink(controller:'motorista', action: 'index')}">Motoristas</g:link>
+          <g:link class="collapse-item" controller="${createLink(controller:'veiculo', action: 'index')}">Veículos</g:link>
+          <g:link class="collapse-item" controller="${createLink(controller:'usuario', action: 'index')}">Usuarios</g:link>
           </div>
         </div>
       </li>
@@ -80,9 +80,9 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="ordem">Ordem de Carregamento</a>
-            <a class="collapse-item" href="pedido">Pedido</a>
-            <a class="collapse-item" href="rotas">Rotas</a>
+            <a class="collapse-item" href="${createLink(controller:'ordemDeCarregamento', action: 'index')}">Ordem de Carregamento</a>
+            <a class="collapse-item" href="${createLink(controller:'pedido', action: 'index')}">Pedido</a>
+            <a class="collapse-item" href="${createLink(controller:'rotas', action: 'index')}">Rotas</a>
           </div>
         </div>
       </li>
@@ -96,9 +96,9 @@
         </a>
         <div id="relatorios" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="relatorioCarregamento">Carregamento</a>
-            <a class="collapse-item" href="relatorioDesempenho">Desempenho</a>
-            <a class="collapse-item" href="relatorioFinanceiro">Financeiro</a>
+            <a class="collapse-item" href="${createLink(controller:'relatorioCarregamento', action: 'index')}">Carregamento</a>
+            <a class="collapse-item" href="${createLink(controller:'relatorioDesempenho', action: 'index')}">Desempenho</a>
+            <a class="collapse-item" href="${createLink(controller:'relatorioFinanceiro', action: 'index')}">Financeiro</a>
           </div>
         </div>
       </li>
