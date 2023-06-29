@@ -26,4 +26,8 @@ class Pessoa {
         numero(nullable:false, maxSize:255)
         cidade(nullable:false, maxSize:255)
     }
+
+    String toString() {
+        "$nome | $cpfCnpj"
+    }
 }

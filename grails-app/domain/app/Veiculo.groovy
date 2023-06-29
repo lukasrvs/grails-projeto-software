@@ -15,4 +15,8 @@ class Veiculo {
         cor(nullable:true,maxSize:20);
         tipo(nullable:true,inList:["Cavalo", "Carreta"]);
     }
+
+    String toString() {
+        "$placa | $tipo "
+    }
 }

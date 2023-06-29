@@ -18,4 +18,8 @@ class Empresa {
         responsavel(nullable: false)
         tipoTransportadora(nullable: false, inList: ["filial", "matriz"])
     }
+
+    String toString() {
+        "$tipoTransportadora | $nome | $cnpj"
+    }
 }

@@ -66,7 +66,7 @@
           <g:link class="collapse-item" controller="mercadoria">Mercadorias</g:link>
           <g:link class="collapse-item" controller="motorista">Motoristas</g:link>
           <g:link class="collapse-item" controller="veiculo">Veículos</g:link>
-          <g:link class="collapse-item" controller="usuario">Usuarios</g:link>
+          <%-- <g:link class="collapse-item" controller="usuario">Usuarios</g:link> --%>
           </div>
         </div>
       </li>
@@ -88,20 +88,7 @@
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#relatorios"
-          aria-expanded="true" aria-controls="relatorios">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Relatorios</span>
-        </a>
-        <div id="relatorios" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="${createLink(controller:'relatorioCarregamento', action: 'index')}">Carregamento</a>
-            <a class="collapse-item" href="${createLink(controller:'relatorioDesempenho', action: 'index')}">Desempenho</a>
-            <a class="collapse-item" href="${createLink(controller:'relatorioFinanceiro', action: 'index')}">Financeiro</a>
-          </div>
-        </div>
-      </li>
+
     </ul>
     <!-- End of Sidebar -->
 

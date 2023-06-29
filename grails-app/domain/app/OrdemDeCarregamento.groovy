@@ -1,6 +1,7 @@
 package app
 
 class OrdemDeCarregamento {
+    Integer id
     Motorista motorista
     Pedido pedido
     BigDecimal valorCarga
@@ -17,7 +18,7 @@ class OrdemDeCarregamento {
         valorCarga(min: 0.0)
         impostos(min: 0.0)
         destinoFinal(nullable: false)
-        status(nullable: false)
+        status(nullable: false, inList: ['ativo', 'inativo', 'finalizado', 'cancelado'])
         rotas(nullable: true)
         veiculoCavalo(validator:{data,obj,errors->
             if(data?.tipo == 'carreta'){

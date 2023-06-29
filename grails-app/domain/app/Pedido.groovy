@@ -1,6 +1,7 @@
 package app
 
 class Pedido {
+    Integer id
     Empresa empresaResponsavel
     Mercadoria mercadoria
     Cliente remetente
@@ -22,5 +23,9 @@ class Pedido {
                 errors.rejectValue('cpfCnpj', "pedido.dataEntrega.validator.invalid")
             }
         })
+    }
+
+    String toString() {
+        "$id | $remetente | $destinatario | $status"
     }
 }

@@ -26,4 +26,8 @@ class Mercadoria {
         dimensoes(nullable: true, blank: true)
     }
 
+    String toString() {
+        "$nome "
+    }
+
 }
